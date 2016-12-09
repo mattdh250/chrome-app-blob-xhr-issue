@@ -1,0 +1,39 @@
+{
+   "name":"Blob XHR Download Test",
+   "manifest_version":2,
+   "description":"Test that aims to replicate 1 GB blob download limit on chrome even with unlimited Storage Quota",
+   "short_name":"Blob XHR Download Test",
+   "version":"0.1",
+   "app":{  
+      "background":{  
+         "scripts":[  
+            "scripts/load.js"
+         ]
+      }
+   },
+   "icons":{
+      "24":"icon_24.png",
+      "128":"icon_128.png"
+   },
+   "permissions":[
+    "http://*.rackcdn.com/",
+    "https://*.rackcdn.com/",
+    "http://static.signagelive.com/",
+    "https://static.signagelive.com/",
+    "unlimitedStorage",
+    "system.storage",
+    "storage",
+    "webview",
+    {  
+        "fileSystem":[  
+            "write",
+            "directory"
+        ]
+    },
+    "power",
+    "webview",
+    "idle"
+   ],
+   "kiosk_enabled":true,
+   "offline_enabled":true
+}
